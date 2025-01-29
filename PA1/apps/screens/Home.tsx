@@ -105,11 +105,14 @@ export default Home;
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-        marginHorizontal: 20
+        marginHorizontal: 20,
+        marginBottom: 20,
 	},
 	form: {
 		marginVertical: 20,
 		flexDirection: 'column',
+        gap: 20,
+        height: 100,
 		//alignItems: 'center'
 	},
 	input: {
@@ -134,7 +137,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		backgroundColor: '#fff',
 		padding: 10,
-		marginVertical: 4
+		marginVertical: 4,
 	},
     completedTodo: {
         textDecorationLine: 'line-through',
