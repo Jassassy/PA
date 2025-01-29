@@ -12,7 +12,7 @@ interface Props {
 }
 
 
-const Home = ({ navigation}: Props) => {
+const test = ({ navigation}: Props) => {
     const [todos, setTodos] = useState<{ id: string; title: string; isComplete: boolean }[]>([]);
     const [newTodo, setNewTodo] = useState('');
     const user = FIREBASE_AUTH.currentUser;
@@ -113,7 +113,7 @@ const Home = ({ navigation}: Props) => {
     );
 };
 
-export default Home;
+export default test;
 
 const styles = StyleSheet.create({
     container: {

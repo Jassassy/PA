@@ -37,8 +37,8 @@ const Login = () => {
         <View style={styles.container}> 
             <KeyboardAvoidingView behavior='padding'>
                 <Text style={styles.header}>To Do List</Text>
-                <TextInput value={email} style={styles.input} placeholder='Email' autoCapitalize='none' onChangeText={(text => setEmail(text))}></TextInput>
-                <TextInput secureTextEntry={true} value={password} style={styles.input} placeholder='Password' autoCapitalize='none' onChangeText={(text => setPassword(text))}></TextInput>
+                <TextInput style={styles.input} value={email} placeholder='Email' autoCapitalize='none' onChangeText={(text => setEmail(text))}></TextInput>
+                <TextInput style={styles.input} secureTextEntry={true} value={password}  placeholder='Password' autoCapitalize='none' onChangeText={(text => setPassword(text))}></TextInput>
                 
                 {loading ? 
                     (<ActivityIndicator size="large" color={"#0000ff"} />
