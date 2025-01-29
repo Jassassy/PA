@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "PA1",
+    "slug": "PA1",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/todo.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/todo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/todo.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/todo.png"
+    }
+  }
+}
