@@ -36,6 +36,7 @@ const Login = () => {
     return (
         <View style={styles.container}> 
             <KeyboardAvoidingView behavior='padding'>
+                <Text style={styles.header}>To Do List</Text>
                 <TextInput value={email} style={styles.input} placeholder='Email' autoCapitalize='none' onChangeText={(text => setEmail(text))}></TextInput>
                 <TextInput secureTextEntry={true} value={password} style={styles.input} placeholder='Password' autoCapitalize='none' onChangeText={(text => setPassword(text))}></TextInput>
                 
@@ -67,4 +68,10 @@ const styles = StyleSheet.create({
         marginBottom: 12,
         paddingHorizontal: 10,
     },
+    header: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: 20,
+    }
 })
