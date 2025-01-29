@@ -4,6 +4,7 @@ Programming Assignment for Mobile Apps and Services on Converge Networks
 
 - Copy repo to your desktop
 - run `npm install` in your terminal
+- execute cd PA1 in your terminal
 - run `npx expo start` and when the qr code shows up, scan with your phone
 
 # Information
