@@ -36,8 +36,9 @@ const Login = () => {
     return (
         <View style={styles.container}> 
             <KeyboardAvoidingView behavior='padding'>
-                <TextInput value={email} style={styles.input} placeholder='Email' autoCapitalize='none' onChangeText={(text => setEmail(text))}></TextInput>
-                <TextInput secureTextEntry={true} value={password} style={styles.input} placeholder='Password' autoCapitalize='none' onChangeText={(text => setPassword(text))}></TextInput>
+                <Text style={styles.header}>To Do List</Text>
+                <TextInput style={styles.input} value={email} placeholder='Email' autoCapitalize='none' onChangeText={(text => setEmail(text))}></TextInput>
+                <TextInput style={styles.input} secureTextEntry={true} value={password}  placeholder='Password' autoCapitalize='none' onChangeText={(text => setPassword(text))}></TextInput>
                 
                 {loading ? 
                     (<ActivityIndicator size="large" color={"#0000ff"} />
@@ -67,4 +68,10 @@ const styles = StyleSheet.create({
         marginBottom: 12,
         paddingHorizontal: 10,
     },
+    header: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: 20,
+    }
 })
