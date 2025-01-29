@@ -5,6 +5,8 @@ import { FIREBASE_AUTH } from '../../FireBaseConfig';
 import { FlatList, TextInput } from 'react-native-gesture-handler';
 import { addDoc, collection, doc, onSnapshot } from 'firebase/firestore';
 import { FIREBASE_DB } from '../../FireBaseConfig';
+import { deleteDoc, updateDoc } from 'firebase/firestore';
+
 
 
 interface Props {
@@ -54,10 +56,29 @@ const Home = ({ navigation}: Props) => {
             console.error('Error adding document: ', e);
         }
     };
+
+    const deleteTodo = async (id: string) => {
+        try {
+            await deleteDoc(doc(FIREBASE_DB, 'todos', id));
+            console.log('Todo deleted:', id);
+        } catch (e) {
+            console.error('Error deleting document:', e);
+        }
+    };
+
+    const toggleComplete = async (id: string, isComplete: boolean) => {
+        try {
+            await updateDoc(doc(FIREBASE_DB, 'todos', id), {
+                isComplete: !isComplete
+            });
+            console.log('Todo updated:', id);
+        } catch (e) {
+            console.error('Error updating document:', e);
+        }
+    };
+    
+
     return (
-        //  <View>
-        //     <Button onPress={() => FIREBASE_AUTH.signOut()} title='Sign Out' />
-        // </View>
         <SafeAreaView style={styles.container}>
             <View style={styles.form}>
                 <TextInput style={styles.input} placeholder='Add Todo' 
@@ -69,8 +90,11 @@ const Home = ({ navigation}: Props) => {
                     keyExtractor={item => item.id}
                     renderItem={({item}) => (
                     <View style={styles.todoContainer}>
-                        <Text style={styles.todoText}>{item.title}</Text>
+                        <Text style={[styles.todoText, item.isComplete && styles.completedTodo]}>{item.title}</Text>
+                        <Button title="✔" onPress={() => toggleComplete(item.id, item.isComplete)} />
+                        <Button title="❌" onPress={() => deleteTodo(item.id)} />
                     </View>
+                    
                     )} />
             <Button onPress={() => FIREBASE_AUTH.signOut()} title='Sign Out' />
         </SafeAreaView>
@@ -112,5 +136,10 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		padding: 10,
 		marginVertical: 4
-	}
+	},
+    completedTodo: {
+        textDecorationLine: 'line-through',
+        color: 'gray',
+    },
+    
 });
