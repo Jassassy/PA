@@ -6,6 +6,6 @@ Programming Assignment for Mobile Apps and Services on Converge Networks
 - run `npm install` in your terminal
 - run `npx expo start` and when the qr code shows up, scan with your phone
 
-- Information
+# Information
 - Users can login in with an account
 - Users can add tasks to the to-do list
