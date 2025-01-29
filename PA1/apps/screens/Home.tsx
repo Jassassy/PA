@@ -118,7 +118,7 @@ export default Home;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginHorizontal: 20
+        marginHorizontal: 20,
     },
     form: {
         marginVertical: 20,
@@ -130,24 +130,60 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 4,
         padding: 10,
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
     },
     todo: {
         flexDirection: 'row',
         flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     todoText: {
         flex: 1,
-        paddingHorizontal: 4
+        paddingHorizontal: 4,
     },
     todoContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#fff',
         padding: 10,
-        marginVertical: 4
+        marginVertical: 4,
     },
+	container: {
+		flex: 1,
+        marginHorizontal: 20,
+        marginBottom: 20,
+	},
+	form: {
+		marginVertical: 20,
+		flexDirection: 'column',
+        gap: 20,
+        height: 100,
+	},
+	input: {
+		alignItems: 'center',
+    flex: 1,
+		height: 40,
+		borderWidth: 1,
+		borderRadius: 4,
+		padding: 10,
+		backgroundColor: '#fff',
+	},
+    todo: {
+		flexDirection: 'row',
+		flex: 1,
+		alignItems: 'center'
+	},
+	todoText: {
+		flex: 1,
+		paddingHorizontal: 4,
+	},
+	todoContainer: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		backgroundColor: '#fff',
+		padding: 10,
+		marginVertical: 4,
+	},
     completedTodo: {
         textDecorationLine: 'line-through',
         color: 'gray',
