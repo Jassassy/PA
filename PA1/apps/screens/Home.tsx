@@ -77,7 +77,6 @@ const Home = ({ navigation}: Props) => {
         }
     };
     
-
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.form}>
